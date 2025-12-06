@@ -1,36 +1,38 @@
-# Automatic Dice Shaker & Color-Detecting Dice Reader
+Automatic Dice Shaker and Color Detecting Dice Reader
 
-This project is an Arduino-based automatic dice randomizer and optical dice reader. It shakes a set of dice using a vibration bowl, releases a single die using a servo-controlled gate, detects the die color with a TCS3200 sensor, and displays the result on an LCD.
+This project is an Arduino based system that shakes dice using a vibration bowl, releases one die using a servo gate, reads its color with a TCS3200 sensor, and displays the result on an LCD. The system was built for the CU Boulder Freshman Projects course.
 
-The system was built for the CU Boulder ECEN/GEEN 1400 Freshman Projects course.
+Features:
 
----
+Automated dice shaking
 
-## ⚡ Features
-- **Automated Dice Randomization**
-  - 0.75-second vibration motor randomized dice reliably.
-- **Servo-Controlled Release Gate**
-  - Guarantees exactly one die passes through at a time.
-- **Optical Color Detection**
-  - TCS3200 sensor detects RGB values and classifies die color.
-- **LCD Display Output**
-  - Output shows “Detected Color: ____”.
-- **Fail-Safe Mechanical Design**
-  - Chute angle tested for optimal sliding  
-  - Gate geometry prevents multiple dice entering the read zone
+Servo controlled single die release
 
----
+TCS3200 color detection
 
-## 🛠 Hardware Used
-- Arduino Uno (Rev 3)
-- TCS3200 Color Sensor
-- SG90 Micro Servo
-- 16x2 LCD Display + I2C Backpack
-- Vibration Motor / Shaker Bowl (custom-built)
-- Custom acrylic or 3D-printed chute + enclosure
+LCD output
 
-Full wiring diagrams are located in **/hardware**.
+Basic mechanical and electrical integration
 
----
+Hardware:
+Arduino Uno, TCS3200 sensor, SG90 servo, 16x2 LCD with I2C, vibration motor bowl, custom chute and gate assembly. Wiring diagrams are located in the hardware folder.
 
-## 📦 Repository Structure
+Firmware:
+The firmware shakes the dice for a set duration, opens the gate, reads RGB values from the sensor, classifies the color, and prints the result on the LCD. The code is in the firmware folder.
+
+Repository Structure:
+firmware – Arduino code
+hardware – wiring diagrams and schematics
+mechanical – CAD files and mechanical components
+testing – data and graphs
+report – final PDF and LaTeX
+demo – videos and photos
+
+Testing:
+Mechanical and electrical testing showed reliable dice shaking, single die release, and stable sensor readings. Color detection accuracy was approximately 90 percent.
+
+Team:
+Naren Tarapareddy
+Micheal Vitas
+Pol Jimenez
+Nathan Vannatter
